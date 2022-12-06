@@ -66,3 +66,43 @@ while (g <= f) {
 }
 console.log(d);
 
+//6. Өгөгдсөн тоог анхны мөн эсэхийг олох программ бич
+
+let t = prompt("duriin too oruulna uu");
+let y = true;
+if (t === 1) {
+    console.log(`${t} ni anhnii too mun baina`);
+}
+else if (t > 1) {
+    for (let i = 2; i < t; i++) {
+        if (t % i == 0) {
+            y = false;
+            break;
+        }
+    }
+    if (y) {
+        console.log(`${t} bol anhnii too mun`);
+    } else {
+        console.log(`${t} bol anhnii TOO BISHH`);
+    }
+}
+else {
+    console.log("bol anhnii TOO BISHH");
+}
+
+//7. Өгөгдсөн интервал дахь анхны тоог хэвлэх программ бич
+
+let as = 10;
+let ad = 30;
+for (let i = as; i <= ad; i++) {
+    let asd = 0;
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            asd = 1;
+            break;
+        }
+    }
+    if (i > 1 && asd == 0) {
+        console.log(i);
+    }
+}
